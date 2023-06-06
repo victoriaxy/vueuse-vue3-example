@@ -37,11 +37,11 @@ module.exports = (env = {}) => ({
       {
         test: /\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: { hmr: !env.prod }
-          },
-          'css-loader'
+          // {
+          //   loader: MiniCssExtractPlugin.loader,
+          //   options: { hmr: !env.prod }
+          // },
+          'style-loader', 'css-loader', 'postcss-loader'
         ]
       }
     ]
@@ -57,10 +57,12 @@ module.exports = (env = {}) => ({
     })
   ],
   devServer: {
-    inline: true,
     hot: true,
-    stats: 'minimal',
-    contentBase: __dirname,
-    overlay: true
+    static: __dirname,
+    //启用gzip压缩,压缩之后发布项目
+    compress:true,
+    //启动自动更新（禁用hot）
+    liveReload:true,
+    port:8088
   }
 })

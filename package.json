@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "webpack serve",
     "build": "webpack --env.prod",
     "iconfont": "node scripts/iconfont.js"
   },
@@ -11,15 +11,20 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/compiler-sfc": "^3.3.4",
+    "autoprefixer": "^10.4.14",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
     "iconfont-pull": "^0.0.5",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.24",
+    "postcss-loader": "^7.3.2",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.2",
     "url-loader": "^4.1.1",
-    "vue-loader": "^16.1.2",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2"
+    "vue-loader": "^17.2.2",
+    "webpack": "^5.85.1",
+    "webpack-cli": "^5.1.3",
+    "webpack-dev-server": "^4.15.0"
   }
 }

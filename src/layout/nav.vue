@@ -28,7 +28,7 @@
             <span>Navigator Four</span>
         </el-menu-item>
     </el-menu> -->
-    <div><i class="iconfont icon-xitongguanli w-5"></i>导航</div>
+    <div><i class="iconfont icon-xitongguanli pr-5"></i>导航</div>
 </template>
 
 <script setup name="nav">
