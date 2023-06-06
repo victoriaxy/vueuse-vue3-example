@@ -1,18 +1,13 @@
 <template>
-  <el-container>
-    <el-aside>
+  <div class="container grid grid-cols-[250px_5fr] w-full h-full overflow-hidden">
+    <div class="p-4 bg-blue-950">
       <Nav></Nav>
-    </el-aside>
-    <div>
-      <el-header>
-        <img src="./logo.svg" />
-      </el-header>
-      <el-main>
-        <router-view></router-view>
-
-      </el-main>
     </div>
-  </el-container>
+    <div class="p-4">
+      <div class="p-2 shadow-xl"><img src="./logo.svg" /></div>
+      <div class="p-4"><router-view></router-view></div>
+    </div>
+  </div>
 </template>
 
 <script setup>
