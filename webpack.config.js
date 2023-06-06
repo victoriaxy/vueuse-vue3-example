@@ -12,12 +12,17 @@ module.exports = (env = {}) => ({
     publicPath: '/dist/'
   },
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    }
+    // alias: {
+    //   '/': path.resolve(__dirname, 'src'),
+    // }
   },
   module: {
     rules: [
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto"
+      },
       {
         test: /\.vue$/,
         use: 'vue-loader'
