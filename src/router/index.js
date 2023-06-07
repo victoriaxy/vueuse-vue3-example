@@ -1,21 +1,31 @@
 import { createRouter ,createWebHashHistory } from 'vue-router';
-import Demo from '../components/demo.vue';
 
 export const menuroutes = [
     {
         path: '/state',
         meta: {title: 'State管理', iconname: 'shouye'},
-        redirect: '/state/first1',
+        redirect: '/state/create-xxx',
         children: [
             {
-                path: 'first1',
-                meta: {title: 'demo1'},
-                component: Demo 
+                path: 'create-xxx',
+                meta: {title: 'createXXX'},
+                component: () => import("../components/state/create-xxx.vue") 
             },
             {
-                path: 'first2',
-                meta: {title: 'demo2'},
-                component: Demo 
+                path: 'use-xxx',
+                meta: {title: 'useXXX'},
+                component: () => import("../components/state/use-xxx.vue") 
+            }
+        ]
+    }, {
+        path: '/elements',
+        meta: {title: 'elements管理', iconname: 'shouye'},
+        redirect: '/elements/create-xxx',
+        children: [
+            {
+                path: 'create-xxx',
+                meta: {title: 'createXXX'},
+                component: () => import("../components/state/create-xxx.vue") 
             }
         ]
     }

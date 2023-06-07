@@ -6,7 +6,8 @@
     "iconfont": "node scripts/iconfont.js"
   },
   "dependencies": {
-    "@vueuse/core": "^4.0.8",
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/shared": "^10.1.2",
     "vue": "^3.0.5",
     "vue-router": "^4.2.2"
   },
